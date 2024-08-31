@@ -1,5 +1,5 @@
 {% set name = "miniopy-async" %}
-{% set version = "1.21.0" %}
+{% set version = "1.21.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c9fad40ed3b8c4f4f75bb8eaa8ac7908536ebce50736c93390488c59a01a192a
+  sha256: 90f3b323288867ad3ede18f6a9b690fad9e1f6554805cadc108b2ceb2abffb20
 
 build:
   noarch: python

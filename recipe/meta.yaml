@@ -26,6 +26,7 @@ requirements:
     - aiofile
     - aiohttp
     - urllib3
+    - typing-extensions
 
 test:
   imports:

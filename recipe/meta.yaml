@@ -1,5 +1,6 @@
 {% set name = "miniopy-async" %}
-{% set version = "1.21.1" %}
+{% set version = "1.21.2" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,23 +8,25 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 90f3b323288867ad3ede18f6a9b690fad9e1f6554805cadc108b2ceb2abffb20
+  sha256: 1b28bca3a80d7ae671206b560e7d5aaead581c1ffd0957d646056dec79f8318e
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
+    - poetry-core
   run:
     - python >={{ python_min }}
-    - certifi
-    - aiofile
-    - aiohttp
-    - urllib3
+    - certifi >=2025.1.31
+    - aiofile >=3.9.0
+    - aiohttp >=3.11.14
+    - urllib3 >=2.3.0
+    - typing-extensions >=4.13.0
 
 test:
   imports:

@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: miniopy-async
-  version: "1.23.4"
+  version: "1.23.5"
   python_min: '3.10'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 6812500247a27b1e03b26521f56d6e5536e405e875e1c88c64426608f5a0c1ac
+  sha256: 33a559b3b63f82e34ac48e2b3e999edae7da3640788996a2633287cb4100d7f1
 
 build:
   number: 0
